@@ -18,7 +18,7 @@ import com.kuehne.nagel.knvmt.security.UserLogged;
 @RequestScoped
 public class UserLoginMB {
 
-	private final static String URL_USER_LOGGED_SUCCESSFULLY = "home.jsf?faces-redirect=true";
+	private final static String URL_USER_LOGGED_SUCCESSFULLY = "view/home.jsf?faces-redirect=true";
 	
 	private String username;
     
@@ -52,7 +52,7 @@ public class UserLoginMB {
             redirect(URL_USER_LOGGED_SUCCESSFULLY);
         } else {
             loggedIn = false;
-            message = new FacesMessage(FacesMessage.SEVERITY_WARN, "Loggin Error", "Invalid credentials");
+            message = new FacesMessage(FacesMessage.SEVERITY_FATAL, "Loggin Error", "Invalid credentials");
         }
          
         FacesContext.getCurrentInstance().addMessage(null, message);

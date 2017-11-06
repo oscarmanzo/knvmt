@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
 import com.kuehne.nagel.knvmt.config.Constants;
 
 @WebFilter(	filterName = "SecurityFilter",
-			urlPatterns = {"/*"})
+			urlPatterns = {"view/*"})
 public class SecurityFilter implements Filter {
 
 	private static final String URL_LOGIN = "login";

@@ -9,35 +9,19 @@ public class WebController {
 	
 	@RequestMapping(value={"/","home"})
 	public ModelAndView home(){
-		System.out.println("--------------> home");
 		//return "home";
-		return new ModelAndView("home.jsf");
-	}
-	
-	@RequestMapping(value={"/welcome"})
-	public ModelAndView welcome(){
-		System.out.println("--------------> welcome");
-		//return "welcome";
-		return new ModelAndView("welcome.jsf");
-	}
-
-	@RequestMapping(value="/admin")
-	public String admin(){
-		System.out.println("--------------> admin");
-		return "admin";
+		return new ModelAndView("view/home.jsf");
 	}
 	
 	@RequestMapping(value={"/login"})
 	public ModelAndView login(){
-		System.out.println("--------------> login");
 		//return "login";
-		return new ModelAndView("login.jsf");
+		return new ModelAndView("view/login.jsf");
 	}
-	
-	
-	@RequestMapping(value="/403")
+		
+	/*@RequestMapping(value="/403")
 	public String Error403(){
 		System.out.println("--------------> 403");
 		return "403";
-	}
+	}*/
 }
