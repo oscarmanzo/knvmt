@@ -5,7 +5,7 @@
 
 	<groupId>com.kuehne.nagel</groupId>
 	<artifactId>knvmt</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<packaging>war</packaging>
 
 	<name>knvmt</name>
@@ -40,6 +40,10 @@
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
 
 		<dependency>
 		    <groupId>com.sun.faces</groupId>
@@ -58,6 +62,12 @@
 		    <groupId>org.primefaces</groupId>
 		    <artifactId>primefaces</artifactId>
 		    <version>6.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 
 	</dependencies>
